@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+}
+
+.nav {
+  max-width: 200px;
+  min-width: 200px;
+  height: 100vh;
+
+  background-color: rgb(238, 238, 238);
+}
+
+.content {
+  width: 100%;
+  
+  padding: 1rem;
+
+  &.red {
+    background-color: #e74c3c;
+  }
+
+  &.green {
+    background-color: #27ae60;
+  }
+}
