@@ -1,1 +1,8 @@
-<button>{{ item().icon }} {{ item().name }}</button>
+<div
+  class="menu-item"
+  onkeypress=""
+  [routerLink]="item().path"
+  routerLinkActive="selected"
+>
+  {{ item().icon }} {{ item().name }}
+</div>

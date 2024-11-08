@@ -1,10 +1,10 @@
 import { Routes } from '@angular/router';
 import { PATHS } from './utils/paths/paths';
 import { DefaultLayoutComponent } from './templates/default-layout/default-layout.component';
-import { UpPageComponent } from './pages/up-page/up-page.component';
-import { DownPageComponent } from './pages/down-page/down-page.component';
 import { ResetPageComponent } from './pages/reset-page/reset-page.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
+import { UpdatePageComponent } from './pages/update-page/update-page.component';
+import { operationDown, operationUp } from './utils/types/updates.type';
 
 export const routes: Routes = [
   {
@@ -18,12 +18,14 @@ export const routes: Routes = [
       },
       {
         path: PATHS.Up,
-        component: UpPageComponent,
+        component: UpdatePageComponent,
+        data: { ...operationUp },
         title: 'Go up',
       },
       {
         path: PATHS.Down,
-        component: DownPageComponent,
+        component: UpdatePageComponent,
+        data: { ...operationDown },
         title: 'Go Down',
       },
       {

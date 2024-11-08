@@ -17,7 +17,7 @@ const downItem: MenuItem = {
 
 const resetItem: MenuItem = {
   id: 'reset',
-  name: 'Go down',
+  name: 'Reset counter',
   icon: '',
   path: PATHS.Reset,
 };

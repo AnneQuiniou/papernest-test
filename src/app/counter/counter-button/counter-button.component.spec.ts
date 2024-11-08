@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UpPageComponent } from './up-page.component';
+import { CounterButtonComponent } from './counter-button.component';
 
-describe('UpPageComponent', () => {
-  let component: UpPageComponent;
-  let fixture: ComponentFixture<UpPageComponent>;
+describe('CounterButtonComponent', () => {
+  let component: CounterButtonComponent;
+  let fixture: ComponentFixture<CounterButtonComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [UpPageComponent]
+      imports: [CounterButtonComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(UpPageComponent);
+    fixture = TestBed.createComponent(CounterButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

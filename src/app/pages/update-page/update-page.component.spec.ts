@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DownPageComponent } from './down-page.component';
+import { UpdatePageComponent } from './update-page.component';
 
-describe('DownPageComponent', () => {
-  let component: DownPageComponent;
-  let fixture: ComponentFixture<DownPageComponent>;
+describe('UpdatePageComponent', () => {
+  let component: UpdatePageComponent;
+  let fixture: ComponentFixture<UpdatePageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [DownPageComponent]
+      imports: [UpdatePageComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(DownPageComponent);
+    fixture = TestBed.createComponent(UpdatePageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
