@@ -3,6 +3,7 @@ import { provideRouter, TitleStrategy } from '@angular/router';
 
 import { routes } from './app.routes';
 import { TitleStrategyService } from './services/title-strategy/title-strategy.service';
+import { appInitializerProviders } from './providers/app-initializers';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -12,5 +13,6 @@ export const appConfig: ApplicationConfig = {
       provide: TitleStrategy,
       useClass: TitleStrategyService,
     },
+    ...appInitializerProviders,
   ],
 };

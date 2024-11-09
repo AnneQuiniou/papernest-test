@@ -4,5 +4,6 @@
   [routerLink]="item().path"
   routerLinkActive="selected"
 >
-  {{ item().icon }} {{ item().name }}
+  <mat-icon aria-hidden="true" svgIcon="item().icon" />
+  {{ item().name }}
 </div>

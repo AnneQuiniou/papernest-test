@@ -1,3 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+/*
+  !PLEASE READ
 
-@import "./app/styles/global.scss";
+  This file MUST only import other SCSS files.
+  It must not contain any declarations.
+*/
+
+@use "./app/styles/material";
+@use "./app/styles/fonts";
+@use "./app/styles/breakpoints";
+@use "./app/styles/html-elements";
