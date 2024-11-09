@@ -1,21 +1,16 @@
-import { Component, EventEmitter, inject } from '@angular/core';
-import { CounterService } from '../../services/counter/counter.service';
-import { Observable } from 'rxjs';
-import { AsyncPipe } from '@angular/common';
+import { Component, EventEmitter } from '@angular/core';
 import { CounterButtonComponent } from '../counter-button/counter-button.component';
+import { CounterValueComponent } from '../counter-value/counter-value.component';
 
 @Component({
   selector: 'app-counter',
   standalone: true,
-  imports: [AsyncPipe, CounterButtonComponent],
+  imports: [CounterButtonComponent, CounterValueComponent],
   templateUrl: './counter.component.html',
   styleUrl: './counter.component.scss',
 })
 export class CounterComponent {
-  readonly counterService = inject(CounterService);
-
   updateCount = new EventEmitter<boolean>();
-  count$: Observable<number> = this.counterService.getCount();
 
   onClick() {
     this.updateCount.emit(true);
