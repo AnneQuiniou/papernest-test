@@ -5,7 +5,12 @@
   It must not contain any declarations.
 */
 
-@use "./app/styles/material";
 @use "./app/styles/fonts";
 @use "./app/styles/breakpoints";
 @use "./app/styles/html-elements";
+
+// Material styles & overrides
+@use "./app/styles/material/material";
+@use "./app/styles/material/stylesm3-theme.scss";
+
+@use "./app/styles/material-custom/index.scss";

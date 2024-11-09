@@ -1,0 +1,10 @@
+mat-sidenav-content {
+  & .red {
+    background-color: red;
+
+  }
+
+  &.green {
+    background-color: green;
+  }
+}

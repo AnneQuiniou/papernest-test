@@ -1,9 +1,10 @@
-<div
+<button
+  mat-button
   class="menu-item"
   onkeypress=""
   [routerLink]="item().path"
   routerLinkActive="selected"
 >
-  <mat-icon aria-hidden="true" svgIcon="item().icon" />
+  <mat-icon aria-hidden="true" [svgIcon]="item().icon" />
   {{ item().name }}
-</div>
+</button>

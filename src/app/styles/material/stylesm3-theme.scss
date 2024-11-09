@@ -14,7 +14,7 @@ $_palettes: (
     30: #2f18d9,
     35: #3c2ee4,
     40: #4a3fef,
-    50: #6660ff,
+    50: #5a52ff, // default color
     60: #8482ff,
     70: #a3a2ff,
     80: #c2c1ff,
@@ -32,8 +32,8 @@ $_palettes: (
     30: #005046,
     35: #005d52,
     40: #006b5e,
-    50: #008676,
-    60: #00a390,
+    50: #008676, 
+    60: #02c5ae, // default color
     70: #00c0aa,
     80: #3dddc5,
     90: #63fae1,
@@ -132,17 +132,25 @@ $_rest: (
   neutral-variant: map.get($_palettes,  neutral-variant),
   error: map.get($_palettes, error),
 );
-$_primary: map.merge(map.get($_palettes, primary), $_rest);
-$_tertiary: map.merge(map.get($_palettes, tertiary), $_rest);
+$primary: map.merge(map.get($_palettes, primary), $_rest);
+$tertiary: map.merge(map.get($_palettes, tertiary), $_rest);
 
-$light-theme: mat.define-theme((
-  color: (
-    theme-type: light,
-    primary: $_primary,
-    tertiary: $_tertiary,
-    use-system-variables: true,
-  ),
-  typography: (
-    use-system-variables: true,
-  ),
-));
+$theme: mat.define-theme(
+  (
+    color: (
+      theme-type: light,
+      primary: $primary,
+      tertiary: $tertiary,
+      use-system-variables: true,
+    ),
+    typography: (
+      use-system-variables: true,
+      plain-family: "OpenSans, arial, verdana, sans-serif",
+      brand-family: "OpenSans, arial, verdana, sans-serif",
+      bold-weight: 700,
+      medium-weight: 400,
+      regular-weight: 400,
+    ),
+  )
+);
+

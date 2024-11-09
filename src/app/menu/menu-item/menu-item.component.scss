@@ -1,16 +1,4 @@
-.menu-item {
-  &.selected {
-    background-color: blue;
-    color: white;
-  }
-
-  &:hover {
-    background-color: rgb(148, 148, 148);
-  }
-
-  background-color: rgb(184, 184, 184);
-  border-radius: .2rem;
-  cursor: pointer;
-
-  padding: .5rem;
+button {
+  width: 100%;
+  text-align: left;
 }

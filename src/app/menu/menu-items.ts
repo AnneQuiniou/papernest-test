@@ -18,7 +18,7 @@ const downItem: MenuItem = {
 const resetItem: MenuItem = {
   id: 'reset',
   name: 'Reset counter',
-  icon: 'settings_backup_restore',
+  icon: 'restart_alt',
   path: PATHS.Reset,
 };
 

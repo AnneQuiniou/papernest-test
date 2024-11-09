@@ -1,6 +1,6 @@
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
-import { iconNames } from '../../ui/icons/icon-names';
+import { iconNames } from './icon-names';
 
 /**
  * Function for the APP_INITIALIZER token:
@@ -15,7 +15,9 @@ export const addIcons = (
     iconNames.forEach((iconName) => {
       matIconRegistry.addSvgIcon(
         iconName,
-        domSanitizer.bypassSecurityTrustResourceUrl(`icons/${iconName}.svg`),
+        domSanitizer.bypassSecurityTrustResourceUrl(
+          `/assets/icons/${iconName}.svg`,
+        ),
       );
     });
   };
