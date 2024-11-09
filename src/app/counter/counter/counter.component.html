@@ -1,9 +1,5 @@
-@let count = count$ | async;
-
 <div class="counter">
-  <div class="counter-count">
-    {{ count }}
-  </div>
+  <app-counter-value />
   <app-counter-button (click)="onClick()">
     <ng-content></ng-content>
   </app-counter-button>
