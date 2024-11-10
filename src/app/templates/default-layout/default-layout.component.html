@@ -1,14 +1,7 @@
-@let count = count$ | async;
-
 <div class="container">
-  <div class="nav">
-    <app-menu />
-  </div>
+  <app-menu />
 
-  <div
-    class="content"
-    [ngClass]="{ red: count && count > 9, green: count && count < -9 }"
-  >
+  <app-default-page-layout>
     <router-outlet />
-  </div>
+  </app-default-page-layout>
 </div>

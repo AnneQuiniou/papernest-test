@@ -1,5 +1,7 @@
-@for(item of menu; track item.id ){
 <div class="menu">
-  <app-menu-item [item]="item" />
+  <div class="menu-container">
+    @for (item of menu; track item.id) {
+      <app-menu-item [item]="item" />
+    }
+  </div>
 </div>
-}

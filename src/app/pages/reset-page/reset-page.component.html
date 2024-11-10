@@ -1,3 +1,4 @@
 <app-counter-value />
-<app-age-verification-form></app-age-verification-form>
-<button (click)="submitForm()">Click to reset counter</button>
+<app-age-verification-form
+  (formSubmit)="onFormSubmit($event)"
+></app-age-verification-form>
