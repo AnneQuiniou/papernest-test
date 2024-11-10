@@ -2,10 +2,11 @@
   <mat-form-field>
     <mat-label>Day</mat-label>
     <input
-      type="string"
+      type="number"
       matNativeControl
+      min="1"
+      max="31"
       appAutofocus
-      maxlength="2"
       formControlName="birthDay"
     />
     <mat-hint>Format expected DD</mat-hint>
@@ -16,10 +17,11 @@
   <mat-form-field>
     <mat-label>Month</mat-label>
     <input
-      type="string"
+      type="number"
       matInput
+      min="1"
+      max="12"
       matNativeControl
-      maxlength="2"
       formControlName="birthMonth"
     />
     <mat-hint>Format expected MM</mat-hint>
@@ -30,11 +32,11 @@
   <mat-form-field>
     <mat-label>Year</mat-label>
     <input
-      type="string"
+      type="number"
       matInput
+      min="1900"
+      max="2100"
       matNativeControl
-      minlength="4"
-      maxlength="4"
       formControlName="birthYear"
     />
     <mat-hint>Format expected YYYY</mat-hint>

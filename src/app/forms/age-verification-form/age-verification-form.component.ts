@@ -29,17 +29,20 @@ export class AgeVerificationFormComponent {
 
   form = this.formBuilder.group<AgeVerificationFormGroup>(
     {
-      birthDay: this.formBuilder.control<string>('', [
+      birthDay: this.formBuilder.control<number | null>(null, [
         Validators.required,
-        Validators.pattern('^(0[1-9]|[12][0-9]|3[01])$'),
+        Validators.min(1),
+        Validators.max(31),
       ]),
-      birthMonth: this.formBuilder.control<string>('', [
+      birthMonth: this.formBuilder.control<number | null>(null, [
         Validators.required,
-        Validators.pattern('^(0[1-9]|1[0-2])$'),
+        Validators.min(1),
+        Validators.max(12),
       ]),
-      birthYear: this.formBuilder.control<string>('', [
+      birthYear: this.formBuilder.control<number | null>(null, [
         Validators.required,
-        Validators.pattern('^(19\\d{2}|20\\d{2}|2100)$'),
+        Validators.min(1900),
+        Validators.max(2100),
       ]),
     },
     { validators: [minimumAgeValidator(this.minimumAge)] },

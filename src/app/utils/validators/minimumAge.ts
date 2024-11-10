@@ -13,7 +13,6 @@ export function minimumAgeValidator(age: number): ValidatorFn {
     const maximumDay = new Date().getDate();
     const maximumMonth = new Date().getMonth() + 1;
     const maximumYear = new Date().getFullYear() - age;
-    console.log('hyearere', providedYear?.value);
 
     if (
       providedDay?.invalid ||
