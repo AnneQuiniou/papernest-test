@@ -1,6 +1,6 @@
 <div class="counter">
   <app-counter-value />
-  <app-counter-button (click)="onClick()">
+  <app-button (click)="onClick()" [disabled]="">
     <ng-content></ng-content>
-  </app-counter-button>
+  </app-button>
 </div>

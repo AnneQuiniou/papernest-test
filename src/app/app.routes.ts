@@ -33,7 +33,6 @@ export const routes: Routes = [
         component: ResetPageComponent,
         title: 'Reset counter',
       },
-
       {
         path: PATHS.Other,
         component: NotFoundPageComponent,

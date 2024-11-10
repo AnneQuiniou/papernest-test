@@ -1,11 +1,11 @@
 import { Component, EventEmitter } from '@angular/core';
-import { CounterButtonComponent } from '../counter-button/counter-button.component';
+import { ButtonComponent } from '../../ui/button/button.component';
 import { CounterValueComponent } from '../counter-value/counter-value.component';
 
 @Component({
   selector: 'app-counter',
   standalone: true,
-  imports: [CounterButtonComponent, CounterValueComponent],
+  imports: [ButtonComponent, CounterValueComponent],
   templateUrl: './counter.component.html',
   styleUrl: './counter.component.scss',
 })
