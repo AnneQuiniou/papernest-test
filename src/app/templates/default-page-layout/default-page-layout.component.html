@@ -1,9 +1,0 @@
-@let color = color$ | async;
-
-<div
-  class="content"
-  [ngClass]="{ red: color === 'red', green: color === 'green' }"
->
-  <app-title>{{ pageTitle }}</app-title>
-  <router-outlet />
-</div>

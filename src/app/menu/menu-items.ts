@@ -4,21 +4,21 @@ import { MenuItem } from '../utils/types/menu.type';
 const upItem: MenuItem = {
   id: 'up',
   name: 'Go up',
-  icon: '',
+  icon: 'trending_up',
   path: PATHS.Up,
 };
 
 const downItem: MenuItem = {
   id: 'down',
   name: 'Go down',
-  icon: '',
+  icon: 'trending_down',
   path: PATHS.Down,
 };
 
 const resetItem: MenuItem = {
   id: 'reset',
   name: 'Reset counter',
-  icon: '',
+  icon: 'restart_alt',
   path: PATHS.Reset,
 };
 

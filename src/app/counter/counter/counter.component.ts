@@ -1,6 +1,6 @@
-import { Component, EventEmitter } from '@angular/core';
 import { ButtonComponent } from '../../ui/button/button.component';
 import { CounterValueComponent } from '../counter-value/counter-value.component';
+import { Component, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-counter',

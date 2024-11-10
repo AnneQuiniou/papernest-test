@@ -1,17 +1,8 @@
-@use "../../../app/styles/breakpoints" as breakpoints;
-
 .menu {
-  background-color: var(--color-light);
+  display: flex;
+  flex-direction: column;
 
-
-  &-container {
-    max-width: 1000px;
-    margin: auto;
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: .5rem 2rem;
-    
-  }
+  justify-content: center;
+  align-items: center;
+  padding: .5rem 2rem;
 }

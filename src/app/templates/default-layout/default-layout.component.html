@@ -1,7 +1,14 @@
-<div class="container">
-  <app-menu />
+@let menuMode = menuMode$ | async;
+@let color = color$ | async;
 
-  <app-default-page-layout>
+<app-toolbar (toggleMenu)="toggleMenu()" />
+<mat-sidenav-container>
+  <mat-sidenav #sideNav [opened]="opened" [mode]="menuMode ?? defaultMode">
+    <app-menu />
+  </mat-sidenav>
+  <mat-sidenav-content
+    [ngClass]="{ green: color == 'green', red: color == 'red' }"
+  >
     <router-outlet />
-  </app-default-page-layout>
-</div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
