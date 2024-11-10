@@ -1,27 +1,28 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { CounterService } from '../../services/counter/counter.service';
 import { CounterComponent } from '../../counter/counter/counter.component';
 import { ActivatedRoute } from '@angular/router';
+import { TitleComponent } from '../../ui/title/title.component';
 
 @Component({
   selector: 'app-update-page',
   standalone: true,
-  imports: [CounterComponent],
+  imports: [CounterComponent, TitleComponent],
   templateUrl: './update-page.component.html',
   styleUrl: './update-page.component.scss',
 })
-export class UpdatePageComponent {
+export class UpdatePageComponent implements OnInit {
   private readonly route = inject(ActivatedRoute);
   readonly counterService = inject(CounterService);
   operation?: string;
-  pageTitle = 'Increase the counter';
+  pageTitle?: string;
   buttonText = 'Click to go up';
 
   ngOnInit() {
+    this.pageTitle = this.route.snapshot.title;
     this.operation = this.route.snapshot.data['operation'];
 
     if (this.operation == 'down') {
-      this.pageTitle = 'Decrease the counter';
       this.buttonText = 'Click to go down';
     }
   }

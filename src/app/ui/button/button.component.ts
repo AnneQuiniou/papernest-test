@@ -1,4 +1,4 @@
-import { Component, EventEmitter, input } from '@angular/core';
+import { Component, EventEmitter, input, Output } from '@angular/core';
 import { MatButton } from '@angular/material/button';
 
 @Component({
@@ -9,10 +9,10 @@ import { MatButton } from '@angular/material/button';
   styleUrl: './button.component.scss',
 })
 export class ButtonComponent {
-  private readonly click = new EventEmitter<boolean>();
+  @Output() clicked = new EventEmitter<boolean>();
   disabled = input<boolean>();
 
   onClick(): void {
-    this.click.emit(true);
+    this.clicked.emit(true);
   }
 }

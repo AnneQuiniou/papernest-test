@@ -1,15 +1,14 @@
-@let count = count$ | async; @let menuMode = menuMode$ | async;
+@let menuMode = menuMode$ | async;
+@let color = color$ | async;
 
-<app-toolbar (toggleMenu)="sideNav.toggle()" />
+<app-toolbar (toggleMenu)="toggleMenu()" />
 <mat-sidenav-container>
-  <mat-sidenav #sideNav [mode]="menuMode ?? defaultMode">
+  <mat-sidenav #sideNav [opened]="opened" [mode]="menuMode ?? defaultMode">
     <app-menu />
   </mat-sidenav>
   <mat-sidenav-content
-    [ngClass]="{ red: count && count > 9, green: count && count < -9 }"
+    [ngClass]="{ green: color == 'green', red: color == 'red' }"
   >
-    <app-default-page-layout>
-      <router-outlet />
-    </app-default-page-layout>
+    <router-outlet />
   </mat-sidenav-content>
 </mat-sidenav-container>

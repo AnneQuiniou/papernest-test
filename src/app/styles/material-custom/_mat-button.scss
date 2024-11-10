@@ -1,0 +1,11 @@
+@use '@angular/material' as mat;
+
+$theme: mat.define-theme();
+
+.menu-item {
+  &.selected {
+    @include mat.button-color($theme, $color-variant: tertiary);
+  }
+  
+  @include mat.button-color($theme, $color-variant: secondary);
+}

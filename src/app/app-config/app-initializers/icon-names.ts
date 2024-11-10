@@ -5,4 +5,5 @@ export const iconNames = [
   'trending_down',
   'trending_up',
   'warning',
+  'event',
 ];

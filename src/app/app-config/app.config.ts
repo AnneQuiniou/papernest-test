@@ -1,4 +1,8 @@
-import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+import {
+  ApplicationConfig,
+  importProvidersFrom,
+  provideZoneChangeDetection,
+} from '@angular/core';
 import { provideRouter, TitleStrategy } from '@angular/router';
 
 import { routes } from '../app.routes';
@@ -6,6 +10,7 @@ import { TitleStrategyService } from '../services/title-strategy/title-strategy.
 import { appInitializerProviders } from './app-initializers';
 import { provideHttpClient } from '@angular/common/http';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MatNativeDateModule } from '@angular/material/core';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -16,6 +21,8 @@ export const appConfig: ApplicationConfig = {
       useClass: TitleStrategyService,
     },
     ...appInitializerProviders,
-    provideHttpClient(), provideAnimationsAsync(),
+    provideHttpClient(),
+    provideAnimationsAsync(),
+    importProvidersFrom(MatNativeDateModule),
   ],
 };

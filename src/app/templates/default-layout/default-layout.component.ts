@@ -1,7 +1,6 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { MenuComponent } from '../../menu/menu/menu.component';
 import { RouterOutlet } from '@angular/router';
-import { CounterService } from '../../services/counter/counter.service';
 import { AsyncPipe, NgClass } from '@angular/common';
 import {
   MatDrawerMode,
@@ -10,9 +9,10 @@ import {
   MatSidenavContent,
 } from '@angular/material/sidenav';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { MatToolbar } from '@angular/material/toolbar';
-import { map, Observable } from 'rxjs';
+import { map, Observable, switchMap } from 'rxjs';
 import { ToolbarComponent } from '../toolbar/toolbar.component';
+import { CounterService } from '../../services/counter/counter.service';
+import { ColorService } from '../../services/color/color.service';
 
 @Component({
   selector: 'app-default-layout',
@@ -21,20 +21,23 @@ import { ToolbarComponent } from '../toolbar/toolbar.component';
     MenuComponent,
     RouterOutlet,
     AsyncPipe,
-    NgClass,
-    MatToolbar,
     MatSidenavContainer,
     MatSidenav,
     MatSidenavContent,
     ToolbarComponent,
+    NgClass,
   ],
   templateUrl: './default-layout.component.html',
   styleUrl: './default-layout.component.scss',
 })
-export class DefaultLayoutComponent {
+export class DefaultLayoutComponent implements OnInit {
   private readonly counterService = inject(CounterService);
+  private readonly colorService = inject(ColorService);
+
+  pageTitle?: string;
+  color$?: Observable<string>;
+
   appTitle = 'Test Papernest';
-  count$ = this.counterService.getCount();
   defaultMode: MatDrawerMode = 'side';
   menuMode$?: Observable<MatDrawerMode>;
   opened = true;
@@ -50,6 +53,14 @@ export class DefaultLayoutComponent {
           return matches ? 'side' : 'over';
         }),
       );
+  }
+
+  ngOnInit() {
+    this.color$ = this.counterService.getCount().pipe(
+      switchMap((count) => {
+        return this.colorService.getColor(count);
+      }),
+    );
   }
 
   toggleMenu() {

@@ -1,10 +1,21 @@
-mat-sidenav-content {
-  & .red {
-    background-color: red;
+@use "../breakpoints" as breakpoints;
 
+mat-sidenav-content {
+  &.red {
+    background-color: #e74c3c;
+    color: white;
   }
 
   &.green {
-    background-color: green;
+    background-color: #27ae60;
+    color: white;
+  }
+
+  min-height: calc(100vh - var(--mat-toolbar-mobile-height));
+  text-align: center;
+  
+  @media #{breakpoints.$mat-gt-xs} {
+    min-height: calc(100vh - var(--mat-toolbar-standard-height));
+    
   }
 }
