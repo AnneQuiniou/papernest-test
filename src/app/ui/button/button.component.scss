@@ -1,0 +1,21 @@
+button {
+
+  &[disabled] {
+    background-color: var(--color-light-shade);
+    color: var(--color-light-contrast);
+  }
+
+  &:not([disabled]):hover {
+    background-color: var(--color-secondary-shade);
+    cursor: pointer;
+  }
+
+  padding: 1rem;
+  background-color: var(--color-secondary);
+
+  border: none;
+  border-radius: var(--border-radius);
+
+  color: var(--color-secondary-contrast);
+
+}

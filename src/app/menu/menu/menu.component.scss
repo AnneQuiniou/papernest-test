@@ -1,6 +1,17 @@
-.menu {
-  display: flex;
-  flex-direction: column;
+@use "../../../app/styles/breakpoints" as breakpoints;
 
-  max-width: 200px;
+.menu {
+  background-color: var(--color-light);
+
+
+  &-container {
+    max-width: 1000px;
+    margin: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: .5rem 2rem;
+    
+  }
 }

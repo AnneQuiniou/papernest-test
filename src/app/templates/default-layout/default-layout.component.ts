@@ -1,4 +1,4 @@
-import { Component, inject, ViewChild } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MenuComponent } from '../../menu/menu/menu.component';
 import { RouterOutlet } from '@angular/router';
 import { CounterService } from '../../services/counter/counter.service';
@@ -48,7 +48,7 @@ export class DefaultLayoutComponent {
         map(({ matches }) => {
           console.log('here');
           return matches ? 'side' : 'over';
-        })
+        }),
       );
   }
 

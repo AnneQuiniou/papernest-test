@@ -5,22 +5,27 @@ import { BehaviorSubject, Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class CounterService {
+  private readonly originalCount = 1;
+  private readonly incrementValue = 1;
+  private readonly multiplierValue = 2;
+  private readonly threshholdValue = 30;
+
   private actionCount = 0;
-  private count = 1;
+  private count = this.originalCount;
   private readonly count$: BehaviorSubject<number> = new BehaviorSubject(
-    this.count
+    this.count,
   );
 
   updateCount(increase: boolean) {
-    this.actionCount += 1;
+    this.actionCount += this.incrementValue;
 
-    if (this.actionCount % 30 == 0) {
-      this.count = this.count * 30;
+    if (this.actionCount % this.threshholdValue == 0) {
+      this.count = this.count * this.multiplierValue;
     } else {
-      let increment = 1;
+      let increment = this.incrementValue;
 
       if (!increase) {
-        increment = -1;
+        increment = -this.incrementValue;
       }
 
       this.count += increment;
@@ -30,7 +35,7 @@ export class CounterService {
   }
 
   resetCounter(): void {
-    this.count = 0;
+    this.count = this.originalCount;
     this.count$.next(this.count);
   }
 

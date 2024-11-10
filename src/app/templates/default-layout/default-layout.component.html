@@ -8,6 +8,8 @@
   <mat-sidenav-content
     [ngClass]="{ red: count && count > 9, green: count && count < -9 }"
   >
-    <router-outlet />
+    <app-default-page-layout>
+      <router-outlet />
+    </app-default-page-layout>
   </mat-sidenav-content>
 </mat-sidenav-container>

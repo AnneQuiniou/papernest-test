@@ -5,7 +5,7 @@ import { Component, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-counter',
   standalone: true,
-  imports: [CounterValueComponent, ButtonComponent],
+  imports: [ButtonComponent, CounterValueComponent],
   templateUrl: './counter.component.html',
   styleUrl: './counter.component.scss',
 })

@@ -1,7 +1,7 @@
-import { Component, inject, ViewChild } from '@angular/core';
-import { AgeVerificationFormComponent } from '../../forms/age-verification-form/age-verification-form.component';
+import { Component, inject } from '@angular/core';
 import { CounterService } from '../../services/counter/counter.service';
 import { CounterValueComponent } from '../../counter/counter-value/counter-value.component';
+import { AgeVerificationFormComponent } from '../../forms/age-verification-form/age-verification-form.component';
 
 @Component({
   selector: 'app-reset-page',
@@ -11,13 +11,10 @@ import { CounterValueComponent } from '../../counter/counter-value/counter-value
   styleUrl: './reset-page.component.scss',
 })
 export class ResetPageComponent {
-  @ViewChild(AgeVerificationFormComponent)
-  form!: AgeVerificationFormComponent;
   private readonly counterService = inject(CounterService);
 
-  submitForm() {
-    if (this.form.getBirthDateFC().valid) {
-      this.counterService.resetCounter();
-    }
+  onFormSubmit(event: Event) {
+    console.log('here', event);
+    this.counterService.resetCounter();
   }
 }
