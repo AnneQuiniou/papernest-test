@@ -1,14 +1,55 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
   <mat-form-field>
-    <mat-label>Enter your date of birth</mat-label>
-    <input matInput formControlName="birthDate" />
-    <mat-hint>Date should follow MM/DD/YYYY format</mat-hint>
+    <mat-label>Day</mat-label>
+    <input
+      type="string"
+      matNativeControl
+      appAutofocus
+      maxlength="2"
+      formControlName="birthDay"
+    />
+    <mat-hint>Format expected DD</mat-hint>
+    @if (form.controls.birthDay.hasError("pattern")) {
+      <mat-error>Please enter a valid day</mat-error>
+    }
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Month</mat-label>
+    <input
+      type="string"
+      matInput
+      matNativeControl
+      maxlength="2"
+      formControlName="birthMonth"
+    />
+    <mat-hint>Format expected MM</mat-hint>
+    @if (form.controls.birthMonth.hasError("pattern")) {
+      <mat-error>Please enter a valid month</mat-error>
+    }
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Year</mat-label>
+    <input
+      type="string"
+      matInput
+      matNativeControl
+      minlength="4"
+      maxlength="4"
+      formControlName="birthYear"
+    />
+    <mat-hint>Format expected YYYY</mat-hint>
+    @if (form.controls.birthYear.hasError("pattern")) {
+      <mat-error>Please enter a valid year</mat-error>
+    }
   </mat-form-field>
   <p>
     <app-button type="submit" [disabled]="!form.valid">
       Click to reset counter
     </app-button>
+    @if (form.hasError("minimumAge")) {
+      <mat-error
+        >You must be over {{ minimumAge }} to reset the counter.</mat-error
+      >
+    }
   </p>
 </form>
-
-{{ form.controls.birthDate.value | json }}
