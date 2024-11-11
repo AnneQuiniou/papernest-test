@@ -1,7 +1,13 @@
 import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { AutoFocusDirective } from './auto-focus.directive';
-import { TestComponent } from '../../app-testing/test/test.component';
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-test-component',
+  template: ` <input appAutofocus type="string" /> `,
+})
+export class TestComponent {}
 
 describe('AutoFocusDirective', () => {
   let fixture: ComponentFixture<TestComponent>;
