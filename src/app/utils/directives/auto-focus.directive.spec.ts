@@ -14,7 +14,8 @@ describe('AutoFocusDirective', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TestComponent, AutoFocusDirective],
+      declarations: [TestComponent],
+      imports: [AutoFocusDirective],
     }).compileComponents();
 
     fixture = TestBed.createComponent(TestComponent);
