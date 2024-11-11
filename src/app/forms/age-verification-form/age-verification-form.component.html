@@ -1,6 +1,6 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
   <mat-form-field>
-    <mat-label>Day</mat-label>
+    <mat-label i18n="Age verification form|Date input title">Day</mat-label>
     <input
       type="number"
       matNativeControl
@@ -9,13 +9,17 @@
       appAutofocus
       formControlName="birthDay"
     />
-    <mat-hint>Format expected DD</mat-hint>
+    <mat-hint i18n="Age verification form|Date format hint"
+      >Format expected DD</mat-hint
+    >
     @if (form.controls.birthDay.hasError("pattern")) {
-      <mat-error>Please enter a valid day</mat-error>
+      <mat-error i18n="Age verification form|Date input error"
+        >Please enter a valid day</mat-error
+      >
     }
   </mat-form-field>
   <mat-form-field>
-    <mat-label>Month</mat-label>
+    <mat-label i18n="Age verification form|Date input title">Month</mat-label>
     <input
       type="number"
       matInput
@@ -24,13 +28,17 @@
       matNativeControl
       formControlName="birthMonth"
     />
-    <mat-hint>Format expected MM</mat-hint>
+    <mat-hint i18n="Age verification form|Date format hint"
+      >Format expected MM</mat-hint
+    >
     @if (form.controls.birthMonth.hasError("pattern")) {
-      <mat-error>Please enter a valid month</mat-error>
+      <mat-error i18n="Age verification form|Date input error"
+        >Please enter a valid month</mat-error
+      >
     }
   </mat-form-field>
   <mat-form-field>
-    <mat-label>Year</mat-label>
+    <mat-label i18n="Age verification form|Date input title">Year</mat-label>
     <input
       type="number"
       matInput
@@ -39,17 +47,25 @@
       matNativeControl
       formControlName="birthYear"
     />
-    <mat-hint>Format expected YYYY</mat-hint>
+    <mat-hint i18n="Age verification form|Date format hint"
+      >Format expected YYYY</mat-hint
+    >
     @if (form.controls.birthYear.hasError("pattern")) {
-      <mat-error>Please enter a valid year</mat-error>
+      <mat-error i18n="Age verification form|Date input error"
+        >Please enter a valid year</mat-error
+      >
     }
   </mat-form-field>
   <p>
-    <app-button type="submit" [disabled]="!form.valid">
+    <app-button
+      type="submit"
+      [disabled]="!form.valid"
+      i18n="Age verification form|Reset button for counter"
+    >
       Click to reset counter
     </app-button>
     @if (form.hasError("minimumAge")) {
-      <mat-error
+      <mat-error i18n="Age verification form|Date input error"
         >You must be over {{ minimumAge }} to reset the counter.</mat-error
       >
     }

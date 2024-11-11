@@ -1,25 +1,25 @@
 import { PATHS } from '../utils/paths/paths';
 import { MenuItem } from '../utils/types/menu.type';
 
-const upItem: MenuItem = {
+export const upMenuItem: MenuItem = {
   id: 'up',
-  name: 'Go up',
+  name: $localize`Go up`,
   icon: 'trending_up',
   path: PATHS.Up,
 };
 
-const downItem: MenuItem = {
+export const downMenuItem: MenuItem = {
   id: 'down',
-  name: 'Go down',
+  name: $localize`Go down`,
   icon: 'trending_down',
   path: PATHS.Down,
 };
 
-const resetItem: MenuItem = {
+export const resetMenuItem: MenuItem = {
   id: 'reset',
-  name: 'Reset counter',
+  name: $localize`Reset counter`,
   icon: 'restart_alt',
   path: PATHS.Reset,
 };
 
-export const menu: MenuItem[] = [upItem, downItem, resetItem];
+export const menu: MenuItem[] = [upMenuItem, downMenuItem, resetMenuItem];

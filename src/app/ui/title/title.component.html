@@ -1,3 +1,6 @@
 <h3>
+  @if (icon()) {
+    <mat-icon aria-hidden="true" [svgIcon]="icon() ?? 'info'" /><br />
+  }
   <ng-content></ng-content>
 </h3>

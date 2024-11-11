@@ -1,10 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-title',
   standalone: true,
-  imports: [],
+  imports: [MatIcon],
   templateUrl: './title.component.html',
   styleUrl: './title.component.scss',
 })
-export class TitleComponent {}
+export class TitleComponent {
+  icon = input<string>();
+}

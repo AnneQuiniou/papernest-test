@@ -38,7 +38,7 @@ export class DefaultLayoutComponent implements OnInit {
   pageTitle?: string;
   theme$?: Observable<ThemeColor>;
 
-  appTitle = 'Test Papernest';
+  appTitle = $localize`Papernest technical test`;
   defaultMode: MatDrawerMode = 'side';
   menuMode$?: Observable<MatDrawerMode>;
   opened = true;
@@ -50,7 +50,6 @@ export class DefaultLayoutComponent implements OnInit {
       .observe([Breakpoints.Medium, Breakpoints.Large, Breakpoints.XLarge])
       .pipe(
         map(({ matches }) => {
-          console.log('here');
           return matches ? 'side' : 'over';
         }),
       );

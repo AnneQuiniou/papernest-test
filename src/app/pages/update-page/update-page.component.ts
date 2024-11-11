@@ -16,14 +16,16 @@ export class UpdatePageComponent implements OnInit {
   readonly counterService = inject(CounterService);
   operation?: string;
   pageTitle?: string;
-  buttonText = 'Click to go up';
+  icon?: string;
+  buttonText = $localize`Click to go up`;
 
   ngOnInit() {
     this.pageTitle = this.route.snapshot.title;
+    this.icon = this.route.snapshot.data['icon'];
     this.operation = this.route.snapshot.data['operation'];
 
     if (this.operation == 'down') {
-      this.buttonText = 'Click to go down';
+      this.buttonText = $localize`Click to go down`;
     }
   }
 
