@@ -4,6 +4,7 @@ import { CounterValueComponent } from '../../counter/counter-value/counter-value
 import { AgeVerificationFormComponent } from '../../forms/age-verification-form/age-verification-form.component';
 import { TitleComponent } from '../../ui/title/title.component';
 import { ActivatedRoute } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-reset-page',
@@ -19,6 +20,7 @@ import { ActivatedRoute } from '@angular/router';
 export class ResetPageComponent implements OnInit {
   private readonly counterService = inject(CounterService);
   private readonly route = inject(ActivatedRoute);
+  private readonly _snackBar = inject(MatSnackBar);
   pageTitle?: string;
 
   ngOnInit() {
@@ -27,5 +29,8 @@ export class ResetPageComponent implements OnInit {
 
   onFormSubmit() {
     this.counterService.resetCounter();
+    this._snackBar.open('Counter is reset', 'Dismiss', {
+      duration: 3000,
+    });
   }
 }
