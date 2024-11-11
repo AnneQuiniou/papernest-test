@@ -1,5 +1,5 @@
 @let menuMode = menuMode$ | async;
-@let color = color$ | async;
+@let theme = theme$ | async;
 
 <app-toolbar (toggleMenu)="toggleMenu()" />
 <mat-sidenav-container>
@@ -7,7 +7,7 @@
     <app-menu />
   </mat-sidenav>
   <mat-sidenav-content
-    [ngClass]="{ green: color == 'green', red: color == 'red' }"
+    [ngClass]="{ green: theme === 'green', red: theme === 'red' }"
   >
     <router-outlet />
   </mat-sidenav-content>

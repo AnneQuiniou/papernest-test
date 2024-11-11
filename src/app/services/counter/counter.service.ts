@@ -5,21 +5,73 @@ import { BehaviorSubject, Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class CounterService {
+  /**
+   * The starting & reset value for the counter
+   *
+   * @private
+   * @memberof CounterService
+   */
   private readonly originalCount = 1;
+
+  /**
+   *Increment value used to increase or decrease the counter
+   *
+   * @private
+   * @memberof CounterService
+   */
   private readonly incrementValue = 1;
+
+  /**
+   * Multiplier value applied when count reaches threshold
+   *
+   * @private
+   * @memberof CounterService
+   */
   private readonly multiplierValue = 2;
-  private readonly threshholdValue = 30;
 
+  /**
+   *Threshold value for which the multiplied is applied
+   *
+   * @private
+   * @memberof CounterService
+   */
+  private readonly threshold = 30;
+
+  /**
+   *Count of all increase or decrease actions applied to the counter
+   *
+   * @private
+   * @memberof CounterService
+   */
   private actionCount = 0;
-  private count = this.originalCount;
-  private readonly count$: BehaviorSubject<number> = new BehaviorSubject(
-    this.count,
-  );
 
-  updateCount(increase: boolean) {
+  /**
+   * Set up first value of count as originaCount;
+   *
+   * @private
+   * @memberof CounterService
+   */
+  private count = this.originalCount;
+
+  /**
+   * BehaviorSubject through which count values are broadcast
+   *
+   * @private
+   * @memberof CounterService
+   */
+  private readonly count$ = new BehaviorSubject(this.count);
+
+  /**
+   * Based on increase parameter, either increases or decreases the value of the counter.
+   * If the current actionCount is a multiple of the threshold value, applies multiplier instead.
+   * Updates count$ BehaviorSubject with new value
+   *
+   * @param {boolean} increase
+   */
+  updateCount(increase: boolean): void {
     this.actionCount += this.incrementValue;
 
-    if (this.actionCount % this.threshholdValue == 0) {
+    if (this.actionCount % this.threshold == 0) {
       this.count = this.count * this.multiplierValue;
     } else {
       let increment = this.incrementValue;
@@ -34,11 +86,20 @@ export class CounterService {
     this.count$.next(this.count);
   }
 
+  /**
+   * Resets count to originalCount value
+   * Updates count$ BehaviorSubject with new value
+   */
   resetCounter(): void {
     this.count = this.originalCount;
     this.count$.next(this.count);
   }
 
+  /**
+   * Returns count value as an observable
+   *
+   * @returns {Observable<number>}
+   */
   getCount(): Observable<number> {
     return this.count$.asObservable();
   }

@@ -1,6 +1,6 @@
-export type MenuItem = {
-  id: string,
-  name: string,
-  icon: string,
-  path: string,
+export interface MenuItem {
+  id: string;
+  name: string;
+  icon: string;
+  path: string;
 }

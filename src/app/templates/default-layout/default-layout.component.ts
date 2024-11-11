@@ -12,7 +12,8 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { map, Observable, switchMap } from 'rxjs';
 import { ToolbarComponent } from '../toolbar/toolbar.component';
 import { CounterService } from '../../services/counter/counter.service';
-import { ColorService } from '../../services/color/color.service';
+import { ThemeService } from '../../services/theme/theme.service';
+import { ThemeColor } from '../../utils/types/theme.type';
 
 @Component({
   selector: 'app-default-layout',
@@ -32,10 +33,10 @@ import { ColorService } from '../../services/color/color.service';
 })
 export class DefaultLayoutComponent implements OnInit {
   private readonly counterService = inject(CounterService);
-  private readonly colorService = inject(ColorService);
+  private readonly themeService = inject(ThemeService);
 
   pageTitle?: string;
-  color$?: Observable<string>;
+  theme$?: Observable<ThemeColor>;
 
   appTitle = 'Test Papernest';
   defaultMode: MatDrawerMode = 'side';
@@ -56,9 +57,9 @@ export class DefaultLayoutComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.color$ = this.counterService.getCount().pipe(
+    this.theme$ = this.counterService.getCount().pipe(
       switchMap((count) => {
-        return this.colorService.getColor(count);
+        return this.themeService.getTheme(count);
       }),
     );
   }

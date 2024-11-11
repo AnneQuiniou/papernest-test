@@ -3,7 +3,7 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ButtonComponent } from '../../ui/button/button.component';
 import { MatInputModule, MatLabel } from '@angular/material/input';
 import { MatFormFieldModule, MatHint } from '@angular/material/form-field';
-import { AutoFocusDirective } from '../../utils/directives/autofocus.directive';
+import { AutoFocusDirective } from '../../utils/directives/auto-focus.directive';
 import { minimumAgeValidator } from '../../utils/validators/minimumAge';
 import { AgeVerificationFormGroup } from '../../utils/types/forms.type';
 

@@ -7,8 +7,20 @@ import { RouterStateSnapshot, TitleStrategy } from '@angular/router';
 })
 export class TitleStrategyService extends TitleStrategy {
   private readonly title = inject(Title);
+
+  /**
+   * Application title to add to all meta titles
+   *
+   * @private {string}
+   * @memberof TitleStrategyService
+   */
   private readonly appTitle = 'Test Papernest';
 
+  /**
+   * Overrides router state snapshot to add a specific appTitles value to display as meta title
+   *
+   * @param {RouterStateSnapshot} snapshot
+   */
   override updateTitle(snapshot: RouterStateSnapshot): void {
     const title = this.buildTitle(snapshot);
 
