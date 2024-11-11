@@ -12,7 +12,10 @@
     <mat-hint i18n="Age verification form|Date format hint"
       >Format expected DD</mat-hint
     >
-    @if (form.controls.birthDay.hasError("pattern")) {
+    @if (
+      form.controls.birthDay.hasError("min") ||
+      form.controls.birthDay.hasError("max")
+    ) {
       <mat-error i18n="Age verification form|Date input error"
         >Please enter a valid day</mat-error
       >
@@ -31,7 +34,10 @@
     <mat-hint i18n="Age verification form|Date format hint"
       >Format expected MM</mat-hint
     >
-    @if (form.controls.birthMonth.hasError("pattern")) {
+    @if (
+      form.controls.birthMonth.hasError("min") ||
+      form.controls.birthMonth.hasError("max")
+    ) {
       <mat-error i18n="Age verification form|Date input error"
         >Please enter a valid month</mat-error
       >
@@ -50,7 +56,10 @@
     <mat-hint i18n="Age verification form|Date format hint"
       >Format expected YYYY</mat-hint
     >
-    @if (form.controls.birthYear.hasError("pattern")) {
+    @if (
+      form.controls.birthYear.hasError("min") ||
+      form.controls.birthYear.hasError("max")
+    ) {
       <mat-error i18n="Age verification form|Date input error"
         >Please enter a valid year</mat-error
       >
