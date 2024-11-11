@@ -1,27 +1,40 @@
-# PapernestTest
+![image](./public/favicon.ico)
+
+# Papernest Technical Test
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
 
-## Development server
+This SPA is intended as a demo implementing of multiple Angular features (components, services, directives, etc),
+RxJs features (Observable, BehaviorSubject, pipe, switchMap, etc), libraries, etc.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Set up
 
-## Code scaffolding
+Please run `npm install` to install required packages.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Useful commands
 
-## Build
+Run `ng serve` for a development server available on `http://localhost:4200/`.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
+Please note the `ng serve` & `ng build` command are configured to provide the application in the **fr locale**.
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Choices made
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### General principles
 
-## Further help
+I'm roughly following [atomic design principles](https://atomicdesign.bradfrost.com/chapter-2/) for the folder organization.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Pages and templates have their own folder, 'dumb' components are in the ui folder and I created folders for ensembles that made sense to me: menu, counter elements, etc.
+
+### Angular Material
+
+Does such a small app need Angular Material ? Generally, no: Angular Material is a pretty heavy library to import compared to the size of the project.
+
+I chose to install Material and use the theme & components mainly to show I know the library and can use it.
+
+### I18n
+
+As Papernest is already present in Spain and France, I'm making an educated guess that localization is a subject for all current apps.
+I decided to include the Angular i18n-related packages & implement them.
+The app has English as a source language but has a French localization package applied.
