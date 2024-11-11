@@ -22,7 +22,7 @@
       </trans-unit>
             <trans-unit id="8636561098859888682" datatype="html">
         <source>Please enter a valid day</source>
-        <source>Veuillez choisir un jour existant</source>
+        <target>Veuillez choisir un jour existant</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/forms/age-verification-form/age-verification-form.component.html</context>
           <context context-type="linenumber">17,21</context>
