@@ -134,23 +134,3 @@ $_rest: (
 );
 $primary: map.merge(map.get($_palettes, primary), $_rest);
 $tertiary: map.merge(map.get($_palettes, tertiary), $_rest);
-
-$theme: mat.define-theme(
-  (
-    color: (
-      theme-type: light,
-      primary: $primary,
-      tertiary: $tertiary,
-      use-system-variables: true,
-    ),
-    typography: (
-      use-system-variables: true,
-      plain-family: "OpenSans, arial, verdana, sans-serif",
-      brand-family: "OpenSans, arial, verdana, sans-serif",
-      bold-weight: 700,
-      medium-weight: 400,
-      regular-weight: 400,
-    ),
-  )
-);
-
