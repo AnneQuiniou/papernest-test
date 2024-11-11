@@ -14,7 +14,7 @@ export class TitleStrategyService extends TitleStrategy {
    * @private {string}
    * @memberof TitleStrategyService
    */
-  private readonly appTitle = 'Test Papernest';
+  private readonly appTitle = $localize`Papernest Technical Test`;
 
   /**
    * Overrides router state snapshot to add a specific appTitles value to display as meta title

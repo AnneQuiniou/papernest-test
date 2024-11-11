@@ -22,14 +22,16 @@ export class ResetPageComponent implements OnInit {
   private readonly route = inject(ActivatedRoute);
   private readonly _snackBar = inject(MatSnackBar);
   pageTitle?: string;
+  icon?: string;
 
   ngOnInit() {
     this.pageTitle = this.route.snapshot.title;
+    this.icon = this.route.snapshot.data['icon'];
   }
 
   onFormSubmit() {
     this.counterService.resetCounter();
-    this._snackBar.open('Counter is reset', 'Dismiss', {
+    this._snackBar.open($localize`Counter is reset`, $localize`Dismiss`, {
       duration: 3000,
     });
   }

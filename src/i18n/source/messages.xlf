@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="2275328567992347600" datatype="html">
+        <source>Page not found</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.routes.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1038418017176652055" datatype="html">
+        <source>Day</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/forms/age-verification-form/age-verification-form.component.html</context>
+          <context context-type="linenumber">3,6</context>
+        </context-group>
+        <note priority="1" from="description">Date input title</note>
+        <note priority="1" from="meaning">Age verification form</note>
+      </trans-unit>
+      <trans-unit id="1792108552669554984" datatype="html">
+        <source>Format expected DD</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/forms/age-verification-form/age-verification-form.component.html</context>
+          <context context-type="linenumber">13,15</context>
+        </context-group>
+        <note priority="1" from="description">Date format hint</note>
+        <note priority="1" from="meaning">Age verification form</note>
+      </trans-unit>
+      <trans-unit id="8636561098859888682" datatype="html">
+        <source>Please enter a valid day</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/forms/age-verification-form/age-verification-form.component.html</context>
+          <context context-type="linenumber">17,21</context>
+        </context-group>
+        <note priority="1" from="description">Date input error</note>
+        <note priority="1" from="meaning">Age verification form</note>
+      </trans-unit>
+      <trans-unit id="48448039669300483" datatype="html">
+        <source>Month</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/forms/age-verification-form/age-verification-form.component.html</context>
+          <context context-type="linenumber">22,25</context>
+        </context-group>
+        <note priority="1" from="description">Date input title</note>
+        <note priority="1" from="meaning">Age verification form</note>
+      </trans-unit>
+      <trans-unit id="4281406672019278985" datatype="html">
+        <source>Format expected MM</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/forms/age-verification-form/age-verification-form.component.html</context>
+          <context context-type="linenumber">32,34</context>
+        </context-group>
+        <note priority="1" from="description">Date format hint</note>
+        <note priority="1" from="meaning">Age verification form</note>
+      </trans-unit>
+      <trans-unit id="3227012432666896964" datatype="html">
+        <source>Please enter a valid month</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/forms/age-verification-form/age-verification-form.component.html</context>
+          <context context-type="linenumber">36,40</context>
+        </context-group>
+        <note priority="1" from="description">Date input error</note>
+        <note priority="1" from="meaning">Age verification form</note>
+      </trans-unit>
+      <trans-unit id="1392596630315787527" datatype="html">
+        <source>Year</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/forms/age-verification-form/age-verification-form.component.html</context>
+          <context context-type="linenumber">41,44</context>
+        </context-group>
+        <note priority="1" from="description">Date input title</note>
+        <note priority="1" from="meaning">Age verification form</note>
+      </trans-unit>
+      <trans-unit id="4534990284017665372" datatype="html">
+        <source>Format expected YYYY</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/forms/age-verification-form/age-verification-form.component.html</context>
+          <context context-type="linenumber">51,53</context>
+        </context-group>
+        <note priority="1" from="description">Date format hint</note>
+        <note priority="1" from="meaning">Age verification form</note>
+      </trans-unit>
+      <trans-unit id="1171669186895291540" datatype="html">
+        <source>Please enter a valid year</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/forms/age-verification-form/age-verification-form.component.html</context>
+          <context context-type="linenumber">55,59</context>
+        </context-group>
+        <note priority="1" from="description">Date input error</note>
+        <note priority="1" from="meaning">Age verification form</note>
+      </trans-unit>
+      <trans-unit id="2035272309726103451" datatype="html">
+        <source> Click to reset counter </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/forms/age-verification-form/age-verification-form.component.html</context>
+          <context context-type="linenumber">65,67</context>
+        </context-group>
+        <note priority="1" from="description">Reset button for counter</note>
+        <note priority="1" from="meaning">Age verification form</note>
+      </trans-unit>
+      <trans-unit id="6146449186482893745" datatype="html">
+        <source>You must be over <x id="INTERPOLATION" equiv-text="{{ minimumAge }}"/> to reset the counter.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/forms/age-verification-form/age-verification-form.component.html</context>
+          <context context-type="linenumber">69,70</context>
+        </context-group>
+        <note priority="1" from="description">Date input error</note>
+        <note priority="1" from="meaning">Age verification form</note>
+      </trans-unit>
+      <trans-unit id="5306811670823265124" datatype="html">
+        <source>Go up</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/menu/menu-items.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6507620236104681682" datatype="html">
+        <source>Go down</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/menu/menu-items.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3064219481307652207" datatype="html">
+        <source>Reset counter</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/menu/menu-items.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4909561660415270398" datatype="html">
+        <source> This page does not seem to exist, please return to another page
+</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/not-found-page/not-found-page.component.html</context>
+          <context context-type="linenumber">3,5</context>
+        </context-group>
+        <note priority="1" from="description">Descriptive message</note>
+        <note priority="1" from="meaning">404 error message</note>
+      </trans-unit>
+      <trans-unit id="1765612817647206901" datatype="html">
+        <source> Please enter your birth date to reset counter.
+</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/reset-page/reset-page.component.html</context>
+          <context context-type="linenumber">7,10</context>
+        </context-group>
+        <note priority="1" from="description">Informative</note>
+        <note priority="1" from="meaning">Reset Page</note>
+      </trans-unit>
+      <trans-unit id="3691319152147768530" datatype="html">
+        <source>Counter is reset</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/reset-page/reset-page.component.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1536087519743707362" datatype="html">
+        <source>Dismiss</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/reset-page/reset-page.component.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1773668996218164400" datatype="html">
+        <source>Click to go up</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/update-page/update-page.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7518850623405701003" datatype="html">
+        <source>Click to go down</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/update-page/update-page.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2164382400638229208" datatype="html">
+        <source>Papernest Technical Test</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/title-strategy/title-strategy.service.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8340922816777436683" datatype="html">
+        <source>Papernest technical test</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/templates/default-layout/default-layout.component.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5446071665480711089" datatype="html">
+        <source>Papernest | technical test</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/templates/toolbar/toolbar.component.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

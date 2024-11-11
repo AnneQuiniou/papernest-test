@@ -11,7 +11,7 @@ import { MatToolbar } from '@angular/material/toolbar';
   styleUrl: './toolbar.component.scss',
 })
 export class ToolbarComponent {
-  readonly appTitle = 'Test Papernest';
+  readonly appTitle = $localize`Papernest | technical test`;
   @Output() toggleMenu = new EventEmitter<boolean>();
 
   onClick(): void {
