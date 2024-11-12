@@ -19,13 +19,15 @@ describe('AutoFocusDirective', () => {
     }).compileComponents();
 
     fixture = TestBed.createComponent(TestComponent);
-    fixture.detectChanges();
   });
 
-  it('should focus on the element', () => {
-    const focusElement = fixture.debugElement.query(
-      By.directive(AutoFocusDirective),
-    );
-    expect(focusElement).toBeDefined();
+  it('should call focus method on init', async () => {
+    const focusElement = fixture.debugElement.query(By.css('input'));
+
+    const spy = spyOn(focusElement.nativeElement, 'focus');
+
+    await fixture.whenStable();
+    fixture.detectChanges();
+    expect(spy).toHaveBeenCalled();
   });
 });

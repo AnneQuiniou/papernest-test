@@ -11,7 +11,7 @@ describe('UpdatePageComponent', () => {
     snapshot: {
       url: 'up',
       title: 'up',
-      data: { ...operationUp },
+      data: { ...operationUp, icon: 'test' },
     },
   };
 

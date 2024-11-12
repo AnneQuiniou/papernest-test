@@ -11,6 +11,7 @@ describe('ResetPageComponent', () => {
     snapshot: {
       url: 'reset',
       title: 'reset',
+      data: { icon: 'test' },
     },
   };
 
