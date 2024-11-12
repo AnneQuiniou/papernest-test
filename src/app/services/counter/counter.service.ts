@@ -1,17 +1,20 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { StorageService } from '../storage/storage.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CounterService {
+  private readonly storage = inject(StorageService);
+
   /**
    * The starting & reset value for the counter
    *
    * @private
    * @memberof CounterService
    */
-  private readonly originalCount = 1;
+  private readonly originalCount = 0;
 
   /**
    *Increment value used to increase or decrease the counter
@@ -83,6 +86,7 @@ export class CounterService {
       this.count += increment;
     }
 
+    this.storage.write('count', this.count);
     this.count$.next(this.count);
   }
 
@@ -92,6 +96,7 @@ export class CounterService {
    */
   resetCounter(): void {
     this.count = this.originalCount;
+    this.storage.write('count', this.count);
     this.count$.next(this.count);
   }
 
@@ -101,6 +106,9 @@ export class CounterService {
    * @returns {Observable<number>}
    */
   getCount(): Observable<number> {
+    this.count = this.storage.read('count') ?? this.originalCount;
+    this.count$.next(this.count);
+
     return this.count$.asObservable();
   }
 }
