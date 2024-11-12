@@ -73,10 +73,20 @@
     >
       Click to reset counter
     </app-button>
-    @if (form.hasError("minimumAge")) {
-      <mat-error i18n="Age verification form|Date input error"
+  </p>
+  @if (form.hasError("minimumAge")) {
+    <p>
+      <mat-error
+        i18n="Age verification form| Minimum age below requirement error"
         >You must be over {{ minimumAge }} to reset the counter.</mat-error
       >
-    }
-  </p>
+    </p>
+  }
+  @if (form.hasError("date")) {
+    <p>
+      <mat-error i18n="Age verification form| Date input error"
+        >Please enter an existing date.</mat-error
+      >
+    </p>
+  }
 </form>

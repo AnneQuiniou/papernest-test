@@ -6,6 +6,7 @@ import { MatFormFieldModule, MatHint } from '@angular/material/form-field';
 import { AutoFocusDirective } from '../../utils/directives/auto-focus.directive';
 import { minimumAgeValidator } from '../../utils/validators/minimumAge';
 import { AgeVerificationFormGroup } from '../../utils/types/forms.type';
+import { existingDateValidator } from '../../utils/validators/existingDate';
 
 @Component({
   selector: 'app-age-verification-form',
@@ -45,7 +46,12 @@ export class AgeVerificationFormComponent {
         Validators.max(2100),
       ]),
     },
-    { validators: [minimumAgeValidator(this.minimumAge)] },
+    {
+      validators: [
+        minimumAgeValidator(this.minimumAge),
+        existingDateValidator(),
+      ],
+    },
   );
 
   onSubmit() {
