@@ -10,12 +10,30 @@ describe('ThemeService', () => {
     service = TestBed.inject(ThemeService);
   });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
+  it('should return empty string if not under minus the thresholdValue or over the thresholdValue ', () => {
+    Object.defineProperty(service, 'thresholdValue', {
+      value: 9,
+      writable: true,
+    });
 
-    // chekc returns of selectTheme method
-    expect(service.selectTheme(10)).toBe('red');
-    expect(service.selectTheme(-10)).toBe('green');
     expect(service.selectTheme(0)).toBe('');
+  });
+
+  it('should return red over thresholdValue', () => {
+    Object.defineProperty(service, 'thresholdValue', {
+      value: 9,
+      writable: true,
+    });
+
+    expect(service.selectTheme(10)).toBe('red');
+  });
+
+  it('should return green under minus the thresholdValue', () => {
+    Object.defineProperty(service, 'thresholdValue', {
+      value: 9,
+      writable: true,
+    });
+
+    expect(service.selectTheme(-10)).toBe('green');
   });
 });
