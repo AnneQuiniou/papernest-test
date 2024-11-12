@@ -4,13 +4,13 @@ import { MatIcon } from '@angular/material/icon';
 import { MatToolbar } from '@angular/material/toolbar';
 
 @Component({
-  selector: 'app-toolbar',
+  selector: 'app-default-layout-toolbar',
   standalone: true,
   imports: [MatToolbar, MatIcon, MatIconButton],
-  templateUrl: './toolbar.component.html',
-  styleUrl: './toolbar.component.scss',
+  templateUrl: './default-layout-toolbar.component.html',
+  styleUrl: './default-layout-toolbar.component.scss',
 })
-export class ToolbarComponent {
+export class DefaultLayoutToolbarComponent {
   readonly appTitle = $localize`Papernest | technical test`;
   @Output() toggleMenu = new EventEmitter<boolean>();
 

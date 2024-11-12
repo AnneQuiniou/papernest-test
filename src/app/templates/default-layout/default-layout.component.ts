@@ -10,10 +10,10 @@ import {
 } from '@angular/material/sidenav';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { map, Observable, switchMap } from 'rxjs';
-import { ToolbarComponent } from '../toolbar/toolbar.component';
 import { CounterService } from '../../services/counter/counter.service';
 import { ThemeService } from '../../services/theme/theme.service';
 import { ThemeColor } from '../../utils/types/theme.type';
+import { DefaultLayoutToolbarComponent } from '../default-layout-toolbar/default-layout-toolbar.component';
 
 @Component({
   selector: 'app-default-layout',
@@ -25,7 +25,7 @@ import { ThemeColor } from '../../utils/types/theme.type';
     MatSidenavContainer,
     MatSidenav,
     MatSidenavContent,
-    ToolbarComponent,
+    DefaultLayoutToolbarComponent,
     NgClass,
   ],
   templateUrl: './default-layout.component.html',
