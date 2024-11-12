@@ -25,8 +25,7 @@ describe('NotFoundPageComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should pull title from route', () => {
     expect(component.pageTitle).toBe('test');
   });
 });

@@ -11,6 +11,7 @@ describe('ResetPageComponent', () => {
     snapshot: {
       url: 'reset',
       title: 'reset',
+      data: { icon: 'reset' },
     },
   };
 
@@ -25,8 +26,11 @@ describe('ResetPageComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should pull title from route', () => {
     expect(component.pageTitle).toBe('reset');
+  });
+
+  it('should pull icon from route', () => {
+    expect(component.icon).toBe('reset');
   });
 });

@@ -13,10 +13,11 @@ describe('TitleComponent', () => {
 
     fixture = TestBed.createComponent(TitleComponent);
     component = fixture.componentInstance;
+    fixture.componentRef.setInput('icon', 'info');
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should have icon if icon is provided', () => {
+    expect(component.icon()).toBe('info');
   });
 });
