@@ -26,9 +26,11 @@ describe('UpdatePageComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should pull title from route', () => {
     expect(component.pageTitle).toBe('up');
+  });
+
+  it('should pull operation from route', () => {
     expect(component.operation).toBe('up');
   });
 });
