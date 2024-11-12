@@ -218,10 +218,10 @@
       </trans-unit>
       <trans-unit id="5446071665480711089" datatype="html">
         <source>Papernest | technical test</source>
-        <target>Papernest | test technique</target>
+        <target>Papernest | Test technique </target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/templates/toolbar/toolbar.component.ts</context>
-          <context context-type="linenumber">14</context>
+          <context context-type="sourcefile">src/app/templates/default-layout-toolbar/default-layout-toolbar.component.ts</context>
+          <context context-type="linenumber">13</context>
         </context-group>
       </trans-unit>
     </body>

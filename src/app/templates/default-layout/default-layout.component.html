@@ -1,7 +1,7 @@
 @let menuMode = menuMode$ | async;
 @let theme = theme$ | async;
 
-<app-toolbar (toggleMenu)="toggleMenu()" />
+<app-default-layout-toolbar (toggleMenu)="toggleMenu()" />
 <mat-sidenav-container>
   <mat-sidenav #sideNav [opened]="opened" [mode]="menuMode ?? defaultMode">
     <app-menu />
